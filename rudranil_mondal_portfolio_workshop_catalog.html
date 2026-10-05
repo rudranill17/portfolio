@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudranil Mondal | Student, Researcher & Facilitator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e3a8a',
+                            900: '#0f52ba',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Arial', 'Helvetica', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .card-hover {
+            transition: all 0.25s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12);
+        }
+        .filter-active {
+            background-color: #1e3a8a !important;
+            color: #ffffff !important;
+            border-color: #1e3a8a !important;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo / Name -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-800 text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-brand-900 transition-colors">
+                        RM
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-slate-900 block leading-none">Rudranil Mondal</span>
+                        <span class="text-xs text-brand-600 font-semibold mt-1 block">Researcher & Student Facilitator</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-brand-800 transition-colors">About Me</a>
+                    <a href="#experience" class="hover:text-brand-800 transition-colors">Experience & Leadership</a>
+                    <a href="#philosophy" class="hover:text-brand-800 transition-colors">Facilitation Style</a>
+                    <a href="#workshops" class="hover:text-brand-800 transition-colors">Workshop Catalog</a>
+                    <a href="#contact" class="px-4 py-2 bg-brand-800 text-white rounded-lg hover:bg-brand-900 transition-colors shadow-sm">Get in Touch</a>
+                </nav>
+
+                <!-- Mobile Navigation Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 py-4 space-y-3">
+            <a href="#about" class="mobile-nav-link block text-sm font-semibold text-slate-700 py-1">About Me</a>
+            <a href="#experience" class="mobile-nav-link block text-sm font-semibold text-slate-700 py-1">Experience & Leadership</a>
+            <a href="#philosophy" class="mobile-nav-link block text-sm font-semibold text-slate-700 py-1">Facilitation Style</a>
+            <a href="#workshops" class="mobile-nav-link block text-sm font-semibold text-slate-700 py-1">Workshop Catalog</a>
+            <a href="#contact" class="mobile-nav-link block text-sm font-semibold text-brand-800 py-1">Get in Touch</a>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-br from-brand-800 via-brand-900 to-slate-900 text-white py-16 lg:py-24 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <div class="lg:col-span-8 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-brand-100 text-xs font-semibold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>MS Candidate in Rural Development @ GAU</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+                    Hello, I'm <span class="text-brand-200">Rudranil Mondal</span>.
+                </h1>
+
+                <p class="text-brand-100 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    B.Sc. Graduate in Agricultural Economics and an emerging peer facilitator. I specialize in conducting practical, hands-on learning sessions for students, campus leaders, and early-stage entrepreneurs.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#workshops" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-xl transition-all shadow-lg flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-book-open"></i> Explore Workshops Offered
+                    </a>
+                    <a href="#contact" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold rounded-xl transition-all text-sm">
+                        Connect for Sessions
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 space-y-4">
+                <h3 class="text-sm uppercase tracking-wider text-brand-200 font-bold border-b border-white/10 pb-2">
+                    Quick Highlights
+                </h3>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-100">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-200 mt-1"></i>
+                        <span>Research Intern in Agricultural Economics at <strong>BRRI</strong></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-200 mt-1"></i>
+                        <span>Founding Convenor & Advisor, <strong>IT Society GAU</strong> (7,500+ participants engaged)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-200 mt-1"></i>
+                        <span>Campus Director, <strong>Hult Prize at GAU</strong> & National Team On-Campus Coordinator</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-200 mt-1"></i>
+                        <span>Co-author of admission prep books <strong>EasyBio Botany & Zoology</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Background & Context</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">About Me</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-4 text-slate-700 text-base leading-relaxed">
+                    <p>
+                        I am a B.Sc. graduate in Agricultural Economics and currently pursuing my MS degree in Rural Development at Gazipur Agricultural University (GAU). My academic journey combines social science research, quantitative data collection, and campus technology leadership.
+                    </p>
+                    <p>
+                        Through my academic research internship at the Bangladesh Rice Research Institute (BRRI) and leadership roles in student organizations, I have developed a strong foundation in organizing data, managing youth initiatives, and making complex tools approachable for peers.
+                    </p>
+                    <p>
+                        As an emerging facilitator, I don't position myself as an all-knowing guru. Instead, I am a continuous learner eager to share practical skill-sets with fellow students, campus groups, and community programs through structured learning sessions.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <i class="fa-solid fa-user-graduate text-brand-700"></i> Education Status
+                    </h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="border-l-2 border-brand-700 pl-3">
+                            <p class="font-semibold text-slate-900">MS candidate in Rural Development</p>
+                            <p class="text-slate-500 text-xs">Gazipur Agricultural University (GAU)</p>
+                        </div>
+                        <div class="border-l-2 border-slate-300 pl-3">
+                            <p class="font-semibold text-slate-900">B.Sc. in Agricultural Economics</p>
+                            <p class="text-slate-500 text-xs">Gazipur Agricultural University (GAU)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Track Record</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Experience & Leadership</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-800 flex items-center justify-center mb-4 text-base font-bold">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">BRRI Research Intern</h3>
+                        <p class="text-xs text-brand-700 font-semibold mb-3">Agricultural Economics Section</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Hands-on experience in field survey design, farm economics data collection, and analytical report writing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-800 flex items-center justify-center mb-4 text-base font-bold">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">IT Society Leadership</h3>
+                        <p class="text-xs text-brand-700 font-semibold mb-3">GAU IT Society</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Founding Convenor, General Secretary, and Advisor. Coordinated over 14 campus events reaching 7,500+ student participants.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-800 flex items-center justify-center mb-4 text-base font-bold">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Hult Prize Leadership</h3>
+                        <p class="text-xs text-brand-700 font-semibold mb-3">Campus & National Team</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            GAU Campus Director (Top 25% regional recognition) & National Team On-Campus Coordinator supporting 73+ campuses nationwide.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-800 flex items-center justify-center mb-4 text-base font-bold">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Co-Author</h3>
+                        <p class="text-xs text-brand-700 font-semibold mb-3">EasyBio Admission Series</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Co-authored <em>EasyBio Botany</em> and <em>EasyBio Zoology</em> to assist students preparing for university entrance exams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-900 to-brand-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-200">Approach & Mindset</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold mt-1 mb-6">My Facilitation Philosophy</h2>
+                    
+                    <p class="text-brand-100 text-base sm:text-lg leading-relaxed mb-6">
+                        "My facilitation philosophy is grounded in peer-to-peer learning, practical trial-and-error, and hands-on skill-building. Rather than lecturing as an expert, I approach every session as a collaborative space where participants learn step-by-step through structured guides, live demonstrations, and practical exercises."
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-white/10 text-xs sm:text-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-users text-brand-200"></i>
+                            </div>
+                            <span>Peer-to-Peer Learning</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-vial text-brand-200"></i>
+                            </div>
+                            <span>Practical Trial-and-Error</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-list-check text-brand-200"></i>
+                            </div>
+                            <span>Actionable Step-by-Step Guides</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshops" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Learning Sessions</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Offered Workshop Modules</h2>
+                    <p class="text-slate-600 text-sm mt-1">Explore structured modules available for student groups, clubs, and youth programs.</p>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative w-full md:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                    <input type="text" id="searchInput" placeholder="Search topics, keywords..." 
+                           class="w-full pl-10 pr-9 py-2.5 text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent transition-all shadow-sm">
+                    <button id="clearSearchBtn" class="hidden absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 text-sm">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div id="categoryContainer" class="flex flex-wrap gap-2 mb-8">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- Courses Counter -->
+            <div class="flex items-center justify-between mb-6 text-xs text-slate-500 font-semibold">
+                <span id="sessionCountText">Loading sessions...</span>
+                <button id="resetViewBtn" class="text-brand-700 hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-rotate-right"></i> Reset Search
+                </button>
+            </div>
+
+            <!-- Modules Card Grid -->
+            <div id="workshopsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300">
+                <div class="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center text-brand-700 mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-base mb-1">No matching modules found</h3>
+                <p class="text-slate-500 text-xs max-w-sm mx-auto mb-4">Try searching for broader terms like "Excel", "CV", or "Design".</p>
+                <button id="resetSearchBtn" class="px-4 py-2 bg-brand-800 text-white font-semibold text-xs rounded-lg hover:bg-brand-900 transition-colors">
+                    Reset Filter & Search
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="workshopModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0">
+        <div id="modalContainer" class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-100 transform scale-95 transition-transform duration-200">
+            
+            <!-- Header -->
+            <div class="p-6 bg-slate-50 border-b border-slate-200 flex justify-between items-start gap-4">
+                <div>
+                    <span id="modalCategory" class="inline-block px-2.5 py-1 text-[11px] font-bold rounded-md bg-brand-50 text-brand-800 border border-brand-100 mb-2">
+                        Category
+                    </span>
+                    <h3 id="modalTitle" class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                        Session Title
+                    </h3>
+                </div>
+                <button id="closeModalBtn" class="w-8 h-8 rounded-full bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 flex items-center justify-center transition-colors shrink-0">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 overflow-y-auto custom-scrollbar space-y-6">
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Session Overview</h4>
+                    <p id="modalDescription" class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                        Description...
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Key Topics Discussed</h4>
+                    <ul id="modalTopics" class="space-y-2.5">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3">
+                <span class="text-xs text-slate-500 font-semibold hidden sm:inline">Peer-to-peer interactive format</span>
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                    <button id="closeModalFooterBtn" class="px-4 py-2 border border-slate-200 text-slate-600 font-semibold text-xs rounded-xl hover:bg-slate-100 transition-colors">
+                        Close
+                    </button>
+                    <a id="requestSessionLink" href="#" class="px-4 py-2 bg-brand-800 text-white font-semibold text-xs rounded-xl hover:bg-brand-900 transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-paper-plane"></i> Request Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-12">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Connect & Collaborate</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1 mb-4">Let's Organize a Learning Session</h2>
+                    <p class="text-slate-600 text-base leading-relaxed mb-8">
+                        I am always happy to connect with universities, student clubs, youth organizations, NGOs, and community programs to facilitate workshops, learning sessions, or seminars.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                        <a href="mailto:rudranill.official@gmail.com" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs text-slate-400 font-semibold">Primary Email</p>
+                                <p class="text-xs sm:text-sm font-bold text-slate-800 truncate">rudranill.official@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/rudranil-mondal" target="_blank" rel="noopener noreferrer" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-800 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs text-slate-400 font-semibold">LinkedIn</p>
+                                <p class="text-xs sm:text-sm font-bold text-slate-800 truncate">linkedin.com/in/rudranil-mondal</p>
+                            </div>
+                        </a>
+
+                        <a href="https://sites.google.com/view/rudranill" target="_blank" rel="noopener noreferrer" class="p-4 bg-white rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition-all flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="text-xs text-slate-400 font-semibold">Personal Site</p>
+                                <p class="text-xs sm:text-sm font-bold text-slate-800 truncate">sites.google.com/view/rudranill</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="text-xs text-slate-500 font-semibold">
+                        Academic Email: <span class="text-slate-700">rudra5973@stu.gau.edu.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-white text-sm">Rudranil Mondal</span>
+                <span>• B.Sc. Ag Econ & MS Rural Dev (GAU)</span>
+            </div>
+            <p>© Rudranil Mondal. Built for peer skill-sharing and facilitation.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Workshop Data Catalog
+        const workshopsData = [
+            // Category 1: Digital Skills & Productivity
+            {
+                id: 1,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "Design 101",
+                description: "An introductory session on creating simple, clean, and attractive visual designs for everyday and social media use.",
+                icon: "fa-palette",
+                topics: [
+                    "Basic principles of good design",
+                    "Using color, fonts, balance, contrast, and alignment",
+                    "Creating visually consistent social media content",
+                    "A simple process for developing a design from idea to final output"
+                ]
+            },
+            {
+                id: 2,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "How to Search Effectively",
+                description: "An introductory guide to finding useful and reliable information online without wasting time.",
+                icon: "fa-magnifying-glass",
+                topics: [
+                    "How to search more effectively",
+                    "Using search techniques and operators",
+                    "Finding and checking reliable sources",
+                    "Useful approaches for academic and professional research"
+                ]
+            },
+            {
+                id: 3,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "Email Tricks",
+                description: "A practical session on using email more efficiently for study, work, and everyday communication.",
+                icon: "fa-envelope-open-text",
+                topics: [
+                    "Organizing and managing an inbox",
+                    "Scheduling and snoozing emails",
+                    "Using labels and email templates",
+                    "Useful Gmail features for saving time and improving productivity"
+                ]
+            },
+            {
+                id: 4,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "AI Tools for Everyday Use",
+                description: "An introduction to using AI tools as practical assistants for study, work, research, and everyday tasks.",
+                icon: "fa-robot",
+                topics: [
+                    "AI tools for research and information gathering",
+                    "Summarizing, writing, note-taking, and idea generation",
+                    "Using AI for productivity and content creation",
+                    "Understanding AI limitations and using AI responsibly"
+                ]
+            },
+            {
+                id: 5,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "Data Cleaning in Excel Session",
+                description: "A practical introduction to making messy Excel data cleaner, more organized, and easier to use.",
+                icon: "fa-table",
+                topics: [
+                    "Finding and removing duplicate or missing data",
+                    "Cleaning and standardizing text",
+                    "Organizing categories and basic coding",
+                    "Useful Excel techniques for preparing data for analysis"
+                ]
+            },
+            {
+                id: 6,
+                category: "Digital Skills & Productivity",
+                slug: "digital-skills",
+                title: "Excel for Small Businesses",
+                description: "An introduction to using Excel for managing common small-business activities and records.",
+                icon: "fa-chart-line",
+                topics: [
+                    "Tracking sales and expenses",
+                    "Basic Profit & Loss calculations",
+                    "Managing inventory and customer information",
+                    "Creating invoices, charts, and simple reports"
+                ]
+            },
+
+            // Category 2: Career & Professional Development
+            {
+                id: 7,
+                category: "Career & Professional Development",
+                slug: "career",
+                title: "LinkedIn Profile Optimization",
+                description: "A practical guide to presenting yourself professionally on LinkedIn and building a stronger online professional identity.",
+                icon: "fa-id-badge",
+                topics: [
+                    "Creating a professional profile",
+                    "Writing an effective headline and About section",
+                    "Presenting education, experience, projects, and skills",
+                    "Showcasing achievements, volunteering, and recommendations"
+                ]
+            },
+            {
+                id: 8,
+                category: "Career & Professional Development",
+                slug: "career",
+                title: "CV Writing ATS",
+                description: "An introductory session on creating a clear CV that is easier for both recruiters and Applicant Tracking Systems (ATS) to read.",
+                icon: "fa-file-lines",
+                topics: [
+                    "Basic structure of a good CV",
+                    "Understanding how ATS works",
+                    "Using relevant keywords and appropriate formatting",
+                    "Common CV mistakes and how to tailor a CV for different opportunities"
+                ]
+            },
+            {
+                id: 9,
+                category: "Career & Professional Development",
+                slug: "career",
+                title: "Good Presentation Guide",
+                description: "A practical session on preparing and delivering presentations in a clearer and more confident way.",
+                icon: "fa-display",
+                topics: [
+                    "Understanding the audience and purpose",
+                    "Organizing content and structuring slides",
+                    "Basic principles of effective slide design",
+                    "Presentation delivery, preparation, and public speaking tips"
+                ]
+            },
+
+            // Category 3: Digital Safety, Awareness & Responsible Internet Use
+            {
+                id: 10,
+                category: "Digital Safety & Cyber Law",
+                slug: "digital-safety",
+                title: "Basic Cybersecurity Practices",
+                description: "An easy introduction to everyday habits that can help people stay safer online.",
+                icon: "fa-shield-halved",
+                topics: [
+                    "Creating and managing stronger passwords",
+                    "Using Two-Factor Authentication (2FA)",
+                    "Recognizing phishing and common online threats",
+                    "Safe browsing, software updates, and data backup"
+                ]
+            },
+            {
+                id: 11,
+                category: "Digital Safety & Cyber Law",
+                slug: "digital-safety",
+                title: "Fact Checking Guideline",
+                description: "An introduction to checking whether online information, images, and claims are trustworthy before believing or sharing them.",
+                icon: "fa-circle-check",
+                topics: [
+                    "Understanding misinformation and fake news",
+                    "Basic fact-checking approaches",
+                    "Reverse image search and simple verification tools",
+                    "Better search practices and responsible information sharing"
+                ]
+            },
+            {
+                id: 12,
+                category: "Digital Safety & Cyber Law",
+                slug: "digital-safety",
+                title: "Social Media Awareness",
+                description: "A discussion on using social media in a safer, healthier, and more responsible way.",
+                icon: "fa-users-line",
+                topics: [
+                    "Benefits and risks of social media",
+                    "Digital footprints and online identity",
+                    "Privacy and personal information",
+                    "Misinformation, cyberbullying, and healthy digital habits"
+                ]
+            },
+            {
+                id: 13,
+                category: "Digital Safety & Cyber Law",
+                slug: "digital-safety",
+                title: "Social Media Etiquette Cyber Law 2025",
+                description: "An awareness session on responsible online communication, social media behavior, and basic legal considerations in Bangladesh.",
+                icon: "fa-scale-balanced",
+                topics: [
+                    "Good manners and responsible communication online",
+                    "Privacy and personal identity",
+                    "What to consider before posting or sharing content",
+                    "Basic awareness of Bangladesh's Cyber Security Ordinance 2025"
+                ]
+            },
+
+            // Category 4: Entrepreneurship & Business
+            {
+                id: 14,
+                category: "Entrepreneurship & Business",
+                slug: "entrepreneurship",
+                title: "Startup Pitch Deck",
+                description: "An introduction to presenting a business idea clearly and convincingly, especially for competitions, programs, or potential supporters.",
+                icon: "fa-lightbulb",
+                topics: [
+                    "Identifying the problem and presenting the solution",
+                    "Understanding customers and market opportunities",
+                    "Business model and competitive advantage",
+                    "Team, financial needs, and implementation plans"
+                ]
+            },
+            {
+                id: 15,
+                category: "Entrepreneurship & Business",
+                slug: "entrepreneurship",
+                title: "Business Startup Bangladesh",
+                description: "A practical introduction to the basic steps and considerations involved in starting a business in Bangladesh.",
+                icon: "fa-briefcase",
+                topics: [
+                    "Understanding a business idea and target customers",
+                    "Basic business models and revenue planning",
+                    "Company registration, trade license, TIN, and VAT",
+                    "Basic funding opportunities and business compliance"
+                ]
+            },
+            {
+                id: 16,
+                category: "Entrepreneurship & Business",
+                slug: "entrepreneurship",
+                title: "Introduction to Investing",
+                description: "An introductory discussion for beginners who want to understand the basic ideas behind personal investing.",
+                icon: "fa-chart-pie",
+                topics: [
+                    "Basic investment concepts",
+                    "Stocks, bonds, mutual funds, ETFs, FDs, and other instruments",
+                    "Understanding risk and return",
+                    "Common beginner mistakes and responsible investment practices"
+                ]
+            },
+
+            // Category 5: Leadership & Student Development
+            {
+                id: 17,
+                category: "Leadership & Student Development",
+                slug: "leadership",
+                title: "Enhanced Student Club Leadership",
+                description: "A practical session on leading student organizations, working with teams, and creating a more active and effective club environment.",
+                icon: "fa-people-group",
+                topics: [
+                    "Understanding leadership and team roles",
+                    "Planning and managing club activities",
+                    "Engaging and motivating volunteers",
+                    "Communication, teamwork, and handling conflicts"
+                ]
+            },
+
+            // Category 6: Academic & Research Communication
+            {
+                id: 18,
+                category: "Academic & Research",
+                slug: "academic",
+                title: "Scientific Poster",
+                description: "An introduction to presenting research in a clear, attractive, and easy-to-understand academic poster.",
+                icon: "fa-flask",
+                topics: [
+                    "Organizing research into a clear poster structure",
+                    "Presenting methods, results, and findings visually",
+                    "Choosing suitable charts, fonts, and layouts",
+                    "Improving readability and avoiding overcrowded designs"
+                ]
+            }
+        ];
+
+        // Categories Configuration
+        const categories = [
+            { name: "All Modules", slug: "all" },
+            { name: "Digital Productivity", slug: "digital-skills" },
+            { name: "Career & CV", slug: "career" },
+            { name: "Digital Safety & Cyber Law", slug: "digital-safety" },
+            { name: "Entrepreneurship", slug: "entrepreneurship" },
+            { name: "Club Leadership", slug: "leadership" },
+            { name: "Academic Research", slug: "academic" }
+        ];
+
+        // App State
+        let currentSlug = "all";
+        let searchQuery = "";
+
+        // DOM Handles
+        const categoryContainer = document.getElementById("categoryContainer");
+        const workshopsGrid = document.getElementById("workshopsGrid");
+        const emptyState = document.getElementById("emptyState");
+        const searchInput = document.getElementById("searchInput");
+        const clearSearchBtn = document.getElementById("clearSearchBtn");
+        const sessionCountText = document.getElementById("sessionCountText");
+        const resetViewBtn = document.getElementById("resetViewBtn");
+        const resetSearchBtn = document.getElementById("resetSearchBtn");
+
+        // Modal Handles
+        const workshopModal = document.getElementById("workshopModal");
+        const modalContainer = document.getElementById("modalContainer");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalTopics = document.getElementById("modalTopics");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        const closeModalFooterBtn = document.getElementById("closeModalFooterBtn");
+        const requestSessionLink = document.getElementById("requestSessionLink");
+
+        // Mobile Menu Handles
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderCategoryFilterButtons();
+            renderWorkshops();
+
+            // Event Listeners
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                clearSearchBtn.classList.toggle("hidden", searchQuery === "");
+                renderWorkshops();
+            });
+
+            clearSearchBtn.addEventListener("click", () => {
+                searchInput.value = "";
+                searchQuery = "";
+                clearSearchBtn.classList.add("hidden");
+                renderWorkshops();
+            });
+
+            resetViewBtn.addEventListener("click", resetFilters);
+            resetSearchBtn.addEventListener("click", resetFilters);
+
+            // Modal Events
+            closeModalBtn.addEventListener("click", closeModal);
+            closeModalFooterBtn.addEventListener("click", closeModal);
+            workshopModal.addEventListener("click", (e) => {
+                if (e.target === workshopModal) closeModal();
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && !workshopModal.classList.contains("hidden")) {
+                    closeModal();
+                }
+            });
+
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            document.querySelectorAll(".mobile-nav-link").forEach(link => {
+                link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+            });
+        });
+
+        function renderCategoryFilterButtons() {
+            categoryContainer.innerHTML = categories.map(cat => `
+                <button 
+                    onclick="setCategory('${cat.slug}')"
+                    class="filter-pill font-semibold px-3.5 py-1.5 rounded-xl text-xs border transition-all cursor-pointer ${
+                        currentSlug === cat.slug 
+                        ? 'filter-active shadow-sm' 
+                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-slate-900'
+                    }">
+                    ${cat.name}
+                </button>
+            `).join("");
+        }
+
+        function setCategory(slug) {
+            currentSlug = slug;
+            renderCategoryFilterButtons();
+            renderWorkshops();
+        }
+
+        function renderWorkshops() {
+            const filtered = workshopsData.filter(item => {
+                const matchesCategory = currentSlug === "all" || item.slug === currentSlug;
+                const matchesSearch = item.title.toLowerCase().includes(searchQuery) ||
+                                     item.description.toLowerCase().includes(searchQuery) ||
+                                     item.topics.some(t => t.toLowerCase().includes(searchQuery));
+                return matchesCategory && matchesSearch;
+            });
+
+            sessionCountText.textContent = `Showing ${filtered.length} of ${workshopsData.length} available learning modules`;
+
+            if (filtered.length === 0) {
+                workshopsGrid.innerHTML = "";
+                emptyState.classList.remove("hidden");
+                return;
+            }
+
+            emptyState.classList.add("hidden");
+            workshopsGrid.innerHTML = filtered.map(item => `
+                <div onclick="openModal(${item.id})" 
+                     class="card-hover bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm flex flex-col justify-between cursor-pointer group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-block px-2.5 py-1 text-[11px] font-bold rounded-md bg-brand-50 text-brand-800 border border-brand-100">
+                                ${item.category}
+                            </span>
+                            <div class="w-8 h-8 rounded-lg bg-slate-50 border border-slate-100 text-brand-800 flex items-center justify-center text-xs group-hover:bg-brand-800 group-hover:text-white transition-colors">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-800 transition-colors">
+                            ${item.title}
+                        </h3>
+
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 line-clamp-3">
+                            ${item.description}
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-brand-700">
+                        <span>${item.topics.length} Key Topics</span>
+                        <span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                            View Syllabus <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </span>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function openModal(id) {
+            const item = workshopsData.find(w => w.id === id);
+            if (!item) return;
+
+            modalCategory.textContent = item.category;
+            modalTitle.textContent = item.title;
+            modalDescription.textContent = item.description;
+
+            modalTopics.innerHTML = item.topics.map(t => `
+                <li class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-xs sm:text-sm text-slate-800">
+                    <span class="w-4 h-4 rounded-full bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span>${t}</span>
+                </li>
+            `).join("");
+
+            // Setup Mailto CTA
+            const subject = encodeURIComponent(`Inquiry for Facilitation Session: ${item.title}`);
+            const body = encodeURIComponent(`Hi Rudranil,\n\nI would like to inquire about hosting your workshop session titled "${item.title}".\n\nOrganization/Campus:\nTarget Audience:\nPreferred Dates:\n\nThanks!`);
+            requestSessionLink.href = `mailto:rudranill.official@gmail.com?subject=${subject}&body=${body}`;
+
+            // Show animation
+            workshopModal.classList.remove("hidden");
+            setTimeout(() => {
+                workshopModal.classList.remove("opacity-0");
+                modalContainer.classList.remove("scale-95");
+                modalContainer.classList.add("scale-100");
+            }, 10);
+
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            workshopModal.classList.add("opacity-0");
+            modalContainer.classList.remove("scale-100");
+            modalContainer.classList.add("scale-95");
+            setTimeout(() => {
+                workshopModal.classList.add("hidden");
+                document.body.style.overflow = "";
+            }, 200);
+        }
+
+        function resetFilters() {
+            currentSlug = "all";
+            searchQuery = "";
+            searchInput.value = "";
+            clearSearchBtn.classList.add("hidden");
+            renderCategoryFilterButtons();
+            renderWorkshops();
+        }
+    </script>
+</body>
+</html>
